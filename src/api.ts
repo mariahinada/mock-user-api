@@ -2,9 +2,18 @@ import express from "express";
 import type { Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
 import cors from "cors";
+import swaggerUI from "swagger-ui-express";
+import swaggerDocument from "../docs/swagger.json";
 
 const app = express();
 const PORT = 3001;
+
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`)
+  console.log(`Swagger UI disponível em http://localhost:${PORT}/api-docs`)
+})
 
 interface User {
   id: string;

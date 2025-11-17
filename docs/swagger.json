@@ -1,0 +1,124 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "API Rest (Express)",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "http://localhost"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Usuários",
+      "description": "Operações relacionadas a usuários"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Pegar Usuários",
+        "description": "Pegar Usuários",
+        "tags": ["Usuários"],
+        "operationId": "pegarUsuRios",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{}]
+      },
+      "post": {
+        "summary": "Criar Cliente",
+        "description": "Criar Cliente",
+        "tags": ["Usuários"],
+        "operationId": "criarCliente",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "company": { "type": "string", "example": "XPTO 3" },
+                  "email": { "type": "string", "example": "beltrano@xpto.com" },
+                  "name": { "type": "string", "example": "Beltrano" }
+                }
+              },
+              "examples": {
+                "Criar Cliente": {
+                  "value": {
+                    "company": "XPTO 3",
+                    "email": "beltrano@xpto.com",
+                    "name": "Beltrano"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [{}]
+      }
+    },
+    "/users/{id}": {
+      "put": {
+        "summary": "Atualizar Usuário",
+        "description": "Atualizar Usuário",
+        "tags": ["Usuários"],
+        "operationId": "atualizarUsuRio",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "company": { "type": "string", "example": "XPTO 3" },
+                  "email": { "type": "string", "example": "beltrano@xpto.com" },
+                  "isActive": { "type": "boolean", "example": true },
+                  "name": { "type": "string", "example": "Beltrano" }
+                }
+              },
+              "examples": {
+                "Atualizar Usuário": {
+                  "value": {
+                    "company": "XPTO 3",
+                    "email": "beltrano@xpto.com",
+                    "isActive": true,
+                    "name": "Beltrano"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "" }
+        }
+      },
+      "delete": {
+        "summary": "Deletar Cliente",
+        "description": "Deletar Cliente",
+        "tags": ["Usuários"],
+        "operationId": "deletarCliente",
+        "responses": {
+          "200": { "description": "" }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": { "type": "string", "example": "" }
+        }
+      ]
+    }
+  },
+  "components": { "securitySchemes": {} }
+}
