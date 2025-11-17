@@ -21,8 +21,7 @@ O **Mock User API** fornece um servidor Express com endpoints para criar, ler, a
 
 ### Passos para Instalar Localmente
 
-1. **Clone o repositório** (ou acesse o diretório do projeto):
-```bash
+1. **Clone o repositório** (ou acesse o diretório do projeto)
 
 2. **Instale as dependências**:
 ```bash
