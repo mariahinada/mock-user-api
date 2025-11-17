@@ -43,6 +43,8 @@ O servidor estará disponível em `http://localhost:3001` > você pode trocar a 
 
 ## Endpoints da API
 
+[Swagger Screenshot] <img width="1278" height="640" alt="Captura de Tela 2025-11-16 às 23 47 13" src="https://github.com/user-attachments/assets/bb4f504d-700b-40dc-ba28-2d37eb24b2e5" />
+
 ### GET /users
 Retorna lista de todos os usuários.
 
